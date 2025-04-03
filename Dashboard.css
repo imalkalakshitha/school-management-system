@@ -1,0 +1,449 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6f9fc 0%, #e9ecef 100%);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.dashboard-header h2 {
+  color: #5c7080;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-nav button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: 120px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-nav button:hover {
+  background-color: #4299e1;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.dashboard-nav button.active {
+  background-color: #3182ce;
+  color: white;
+}
+
+.dashboard-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* Overview Section */
+.overview-section {
+  text-align: left;
+}
+
+.overview-section h3 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.class-info {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.class-info p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+.class-info strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.student-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.male-students, .female-students {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.student-lists h4 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.male-students h4::before {
+  content: "👨‍🎓";
+}
+
+.female-students h4::before {
+  content: "👩‍🎓";
+}
+
+.student-lists ul {
+  list-style: none;
+  padding: 0;
+}
+
+.student-lists li {
+  padding: 0.8rem;
+  color: #4a5568;
+  border-bottom: 1px solid #edf2f7;
+  transition: background-color 0.2s;
+}
+
+.student-lists li:hover {
+  background-color: #f7fafc;
+}
+
+/* Attendance Section */
+.attendance-section h3 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.attendance-form {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
+.date-picker {
+  margin-bottom: 2rem;
+}
+
+.date-picker input {
+  padding: 0.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 200px;
+  color: #4a5568;
+}
+
+.student-attendance {
+  display: grid;
+  gap: 1rem;
+}
+
+.attendance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-row span {
+  font-size: 1.1rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.attendance-row select {
+  padding: 0.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #4a5568;
+  background: white;
+  min-width: 120px;
+}
+
+/* Assignments Section */
+.assignments-section h3 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.create-assignment {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.create-assignment h4 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.create-assignment form {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 600px;
+}
+
+.create-assignment input,
+.create-assignment textarea {
+  padding: 0.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.create-assignment textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.create-assignment button {
+  padding: 0.8rem 1.5rem;
+  background: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.create-assignment button:hover {
+  background: #2c5282;
+}
+
+.assignments-list {
+  margin-top: 2rem;
+}
+
+.assignment-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.assignment-item h5 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.assignment-item p {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+/* Grades Section */
+.grades-section h3 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.grade-matrix {
+  overflow-x: auto;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.grade-matrix table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.grade-matrix th,
+.grade-matrix td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.grade-matrix th {
+  background: #f8fafc;
+  color: #2d3748;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.grade-matrix td:first-child {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.grade-matrix input {
+  width: 80px;
+  padding: 0.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.grade-matrix input:focus {
+  border-color: #3182ce;
+  outline: none;
+}
+
+/* Footer */
+.dashboard-footer {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #3182ce;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #2c5282;
+  transform: translateY(-2px);
+}
+
+.back-button::before {
+  content: "←";
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    padding: 1.5rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-nav {
+    flex-direction: column;
+  }
+
+  .dashboard-nav button {
+    width: 100%;
+  }
+
+  .dashboard-content {
+    padding: 1.5rem;
+  }
+
+  .student-lists {
+    grid-template-columns: 1fr;
+  }
+
+  .attendance-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+
+  .create-assignment form {
+    max-width: 100%;
+  }
+
+  .grade-matrix {
+    margin: 0 -1.5rem;
+    border-radius: 0;
+  }
+}
+
+/* Loading States */
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #4a5568;
+}
+
+/* Error States */
+.error-message {
+  background: #fff5f5;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #feb2b2;
+}
+
+/* Success Messages */
+.success-message {
+  background: #f0fff4;
+  color: #2f855a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #9ae6b4;
+}
